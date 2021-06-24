@@ -3,6 +3,7 @@
     align-items: center;
     min-height: 472px;
     background: #F6F6F6;
+    padding: 50px 0;
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -12,7 +13,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 277px;
+        
     }
     &__icon {
         width: 70px;
@@ -24,6 +25,7 @@
         font-weight: 700;
         font-size: 18px;
         color: $main-color;
+        text-align: center;
     }
     &__desc {
         margin-top: 20px;
@@ -32,6 +34,7 @@
         line-height: 18px;
         text-align: center;
         color: $main-color;
+        width: 277px;
         span {
             text-decoration-line: underline;
             color: #FF0000;
