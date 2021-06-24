@@ -1,0 +1,16 @@
+
+@media (max-width: 1200px) {
+    .header {
+        justify-content: space-around;
+    }
+    .promo {
+        &__wrapper {
+            margin-right: 47px;
+        }
+    }
+    .advantages {
+        &__wrapper {
+            justify-content: space-around;
+        }
+    }
+}
