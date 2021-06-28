@@ -52,22 +52,43 @@ const slider = tns({                                                            
 
 
   $(document).ready(function(){
-    $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+    $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
       $(this)
-        .addClass('active').siblings().removeClass('active')
-        .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+        .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
+        .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
     });
+
+
+
+                  /* Контентная часть таба - вариант №1 */
+    // $('.catalog-item__link').each(function(i) {
+    //   $(this).on('click', function(e) {
+    //     e.preventDefault();
+    //     $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+    //     $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+    //   })
+    // });
+
+    // $('.catalog-item__back').each(function(i) {
+    //   $(this).on('click', function(e) {
+    //     e.preventDefault();
+    //     $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+    //     $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+    //   })
+    // });
+
+                  /* Контентная часть таба - вариант №2 - оптимизированный */
+    function toggleClass(item) {          /* item */
+      $(item).each(function(i) {
+        $(this).on('click', function(e) {
+          e.preventDefault();
+          $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+          $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+        })
+      });
+    };
+    toggleSlide('.catalog-item__link');
+    toggleslide('.catalog-item__back');
+
   });
-
-
-
-
-
-
-
-
-
-
-document.querySelector('.prev').addEventListener ('click', function () {
-    slider.goTo('prev');
-});
+  
