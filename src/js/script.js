@@ -78,7 +78,8 @@ const slider = tns({                                                            
     // });
 
                   /* Контентная часть таба - вариант №2 - оптимизированный */
-    function toggleClass(item) {          /* item */
+                  
+    function toggleSlide(item) {      /* Item */
       $(item).each(function(i) {
         $(this).on('click', function(e) {
           e.preventDefault();
@@ -88,7 +89,7 @@ const slider = tns({                                                            
       });
     };
     toggleSlide('.catalog-item__link');
-    toggleslide('.catalog-item__back');
+    toggleSlide('.catalog-item__back');
 
   });
   
