@@ -91,5 +91,93 @@ const slider = tns({                                                            
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
 
+    /* Modal */
+
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn();
+    });
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+    });
+
+
+    
+    /* $('.button_mini').on('click',function() {
+        $('.overlay, #order').fadeIn();
+    }); */
+
+    $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn();
+        });
+    });
+    
+
+    /* Валидация форм */
+
+    /* $('#consultation-form').validate(); */
+
+    /* Валидируем одну форму, после создадим оптимизированный вариант*/
+
+    /* $('#consultation form').validate( {
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        phone: "required",
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: {
+          required: "Пожалуйста, укажите ваше имя",
+          minlength: jQuery.validator.format("Введите не менее {0} символов")
+        },
+        phone: "Пожалуйста, укажите ваш номер телефона",
+        email: {
+          required: "Пожалуйста, укажите вашу почту",
+          email: "Неправильно введён адрес эл-почты"
+        }
+      }
+    }); */
+
+    /* $('#order form').validate(); */
+
+
+    /* оптимизированная валидация формы */
+    function valideForms(form){
+      $(form).validate( {
+        rules: {
+          name: {
+            required: true,
+            minlength: 2
+          },
+          phone: "required",
+          email: {
+            required: true,
+            email: true
+          }
+        },
+        messages: {
+          name: {
+            required: "Пожалуйста, укажите ваше имя",
+            minlength: jQuery.validator.format("Введите не менее {0} символов")
+          },
+          phone: "Пожалуйста, укажите ваш номер телефона",
+          email: {
+            required: "Пожалуйста, укажите вашу почту",
+            email: "Неправильно введён адрес эл-почты"
+          }
+        }
+      });
+    };
+    valideForms('#consultation-form');
+    valideForms('#consultation form');
+    valideForms('#order form');
+
   });
   
