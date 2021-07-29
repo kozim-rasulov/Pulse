@@ -179,5 +179,28 @@ const slider = tns({                                                            
     valideForms('#consultation form');
     valideForms('#order form');
 
+
+    /* Маска ввода номера на сайте */
+    $('input[name=phone]').mask("+999 (99) 999-99-99");
+
+
+    /* PHP */
+
+    $('form').submit(function(e) {
+      e.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+      }).done(function() {
+        $(this).find("input").val("");
+        $('#consultation, #order').fadeOut();
+        $('.overlay, #thanks').fadeIn('slow');
+
+        $('form').trigger('reset');
+      });
+      return false;
+    });
+
   });
   
