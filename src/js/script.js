@@ -218,4 +218,6 @@ const slider = tns({                                                            
       return false;
     });
 
+
+    new WOW().init();
   });
