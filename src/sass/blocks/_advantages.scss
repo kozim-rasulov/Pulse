@@ -19,6 +19,16 @@
         width: 70px;
         height: 70px;   
         object-fit: cover;
+        &_animated {
+            animation: heartbeat 1.5s ease infinite;
+            /* animation-name: heartbeat;
+            animation-duration: 1.5s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite; */
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
     }
     &__title {
         margin-top: 35px;
@@ -35,6 +45,7 @@
         text-align: center;
         color: $main-color;
         width: 277px;
+        margin-bottom: 5px;
         span {
             text-decoration-line: underline;
             color: #FF0000;
