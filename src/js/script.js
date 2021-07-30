@@ -219,5 +219,6 @@ const slider = tns({                                                            
     });
 
 
+    /* wow min js */
     new WOW().init();
   });
