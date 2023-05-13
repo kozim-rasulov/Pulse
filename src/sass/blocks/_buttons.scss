@@ -1,0 +1,59 @@
+.button {
+    // width: 150px;
+    // height: 30px;
+    padding: 6px 19px;
+    background: $main-color;
+    border-radius: 5px;
+    border: none;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: 0.5s all;
+    &:hover {
+        background-color: $btn-hover;
+    }
+    &:active {
+        transform: scale(0.96);
+    }
+
+    &_main {
+        // width: 300px;
+        // height: 50px;
+        padding: 13px 42px;
+        font-size: 16px;
+        margin-top: 67px;
+    }
+
+    &_submit {
+        font-size: 16px;
+        padding: 15.5px 19px;
+    }
+
+    &_catalog {
+        font-size: 14px;
+        width: 131px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .button {
+        &_submit {
+            font-size: 14px;
+            padding: 15px 19px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .button {
+        &_main {
+            font-size: 15.2px;
+        }
+
+        &_submit {
+            font-size: 13px;
+        }
+    }
+}

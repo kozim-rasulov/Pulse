@@ -1,0 +1,108 @@
+.promo {
+    padding: 21px 0 93px;
+    background: url('../img/main_bg.png') center (center/cover) no-repeat;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 91px;
+    }
+
+    &__header {
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 42px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    &__subheader {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-top: 17px;
+    }
+
+    &__icons {
+        display: flex;
+        width: 424px;
+        justify-content: space-between;
+        margin-top: 60px;
+    }
+
+    &__icon {
+        width: 106px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        color: #FFFFFF;
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
+    &__link {
+        font-weight: 500;
+        font-size: 16px;
+        color: #FFFFFF;
+        margin-top: 10px;
+        a {
+            text-decoration: underline;
+            color: #FFFFFF;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .promo {
+        &__header {
+            font-size: 36px;
+        }
+        &__subheader {
+            font-size: 18px;
+        }
+        &__icons {
+            width: 385px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .promo {
+        &__wrapper {
+            margin-top: 76px;
+        }
+        &__header {
+            font-size: 32px;
+        }
+        &__subheader {
+            margin-top: 10px;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .promo {
+        &__header {
+            font-size: 20px;
+        }
+        &__subheader {
+            font-size: 11px;
+            margin-top: 0;
+            line-height: 8px;
+        }
+        &__icons {
+            width: 290px;
+        }
+        &__icon {
+            font-size: 12px;
+        }
+        &__link {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.pageUp {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    span {
+        display: block;
+        font-size: 40px;
+        color: $main-color;
+        &:hover {
+            color: $btn-hover;
+        }
+        &:active {
+            transform: scale(0.96);
+        }
+    }
+}
